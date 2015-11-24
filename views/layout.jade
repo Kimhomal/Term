@@ -2,7 +2,7 @@ doctype html
 html(lang='ko')
   head
     block title
-      title BBDO
+      title survey
     meta(charset='UTF-8')
     link(rel='stylesheet', href='/bower/bootstrap/dist/css/bootstrap-theme.css')
     link(rel='stylesheet', href='/bower/bootstrap/dist/css/bootstrap.css')
@@ -10,4 +10,6 @@ html(lang='ko')
     script(type='text/javascript', src='/bower/jquery/dist/jquery.js')
     script(type='text/javascript', src='/bower/bootstrap/dist/js/bootstrap.js')
   body
+    block top-nav
+      include ./includes/topnav
     block hero-unit
