@@ -15,7 +15,16 @@
         li
           a(href='#') 설문지
       ul.nav.navbar-nav.navbar-right
-        li
-          a(href='#') Singin
-        li
-          a(href='#') Singup
+        if (currentUser)
+          if (currentUser.email == 'admin@admin')
+            li
+              a(href='/users/') MemberList
+          li
+            a(href='/users/#{currentUser._id}') Profile
+          li
+            a(href='/signout') Signout
+        else
+          li
+            a(href='/signin') Signin
+          li
+            a(href='/users/new') Signup
