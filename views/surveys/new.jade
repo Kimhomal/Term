@@ -1,0 +1,14 @@
+extends ../layout
+
+block content
+  #main.container.loading
+    form.form-survey(action='/survey', method='POST')
+      .panel.panel-default.survey-form
+        .panel-body
+          input(type='text', id='title', class='form-control input-lg', 
+          placeholder='설문지 제목을 입력하세요')
+          input(type='text', id='descript', class='form-control', 
+          placeholder='설문지 설명을 입력하세요')
+          hr
+          p 내용을 입력하세요
+  script(type='text/javascript', src='/javascripts/surveys.js')

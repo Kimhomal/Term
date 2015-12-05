@@ -26,6 +26,12 @@
     border-top-left-radius: 0;
     border-top-right-radius: 0; }
 
+.form-survey {
+  }
+  .form-survey input {
+    border: none;
+  }
+
 .form-actions {
   float: right; }
 
@@ -41,7 +47,6 @@ a {
 
 .jumbotron {
   margin-top: -1em;
-  background: url("/images/surveyImg2.jpg") no-repeat left top;
   -webkit-background-size: 100%;
   -moz-background-size: 100%;
   -o-background-size: 100%;
