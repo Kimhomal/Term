@@ -1,5 +1,7 @@
 @import "../bower/bourbon/app/assets/stylesheets/bourbon";
 @import "./includes/_signin";
+@import "./includes/_surveys";
+@import "./includes/_spinner";
 
 .form-actions {
   float: right;
@@ -23,7 +25,7 @@ a {
   -moz-background-size: 100%;
   -o-background-size: 100%;
   background-size: 100%;
-  background-color: rgba(114, 69, 242, 0.4);
+  background-color: rgba(255, 255, 255, 0);
   min-height: 20em;
   color: rgba(0, 0, 0, 0.4);
   text-shadow: 2px 2px 10px rgba(20, 0, 255, 0.7);

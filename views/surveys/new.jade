@@ -1,14 +1,35 @@
-extends ../layout
+script(type='text/javascript', src='/javascripts/surveys.js')
+form.form-survey(action='/surveys', method='POST')
+  .panel.panel-default.survey-form
+    .panel-body
+      input(type='text', id='title', class='form-control input-lg', 
+      placeholder='설문지 제목을 입력하세요', value='안녕')
+      textarea(id='descript', class='form-control', rows='2',
+      placeholder='설문지 설명을 입력하세요')
+      hr
+      #optionline.row
+        .col-lg-12
+          .input-group
+            span.input-group-addon
+              input(type='checkbox')
+            input(type='text', id='option1', class='form-control', placeholder='옵션1')
+  .form-action
+    button.btn.btn-primary(type='submit') 저장
 
-block content
-  #main.container.loading
-    form.form-survey(action='/survey', method='POST')
-      .panel.panel-default.survey-form
-        .panel-body
-          input(type='text', id='title', class='form-control input-lg', 
-          placeholder='설문지 제목을 입력하세요')
-          input(type='text', id='descript', class='form-control', 
-          placeholder='설문지 설명을 입력하세요')
-          hr
-          p 내용을 입력하세요
-  script(type='text/javascript', src='/javascripts/surveys.js')
+button#post-task.btn.btn-primary.btn-lg.btn-block(type='button' onclick="javasript:addOption();") 추가
+button#post-task.btn.btn-primary.btn-lg.btn-block(type='button' onclick="javasript:delOption();") 삭제
+
+form.form-suvey(action='/surveys', method='POST')
+  .panel.panel-default.suvey-form
+    .panel-body
+      ul.tasks
+script#task-template(type='text/template').
+        <li class='task <%= doneStr %>' data-id='<%= id %>'>
+          <input type='text' id='title1' class='form-control input-lg' placeholder='설문지 제목을 입력하세요'>
+          <a class="btn btn-default" href="#" role="button">Link</a>
+        </li>
+
+script.
+  $(function() {
+    var surv = new SurvController();
+  });

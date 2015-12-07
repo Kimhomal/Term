@@ -1,0 +1,17 @@
+extends ../layout
+
+block content
+  #main.container
+    .row
+      .col-sm-9
+        include ./new
+      .col-sm-3.side
+        include ./surv-side
+    .spinner
+      .background
+      .foreground
+        p
+          i.fa.fa-circle-o-notch.fa-spin.fa-4x
+        p Loading...
+        
+script(type='text/javascript', src='/javascripts/surveys.js')

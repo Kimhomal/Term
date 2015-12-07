@@ -2,4 +2,48 @@
   input {
     border: none;
   }
+  textarea {
+    border: none;
+  }
+}
+
+.side {
+  section {
+    background: #888;
+    width: 100%;
+    color: #fff;
+    a {
+      color: #fff;
+      display: inline-block;
+      text-decoration: none;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0.5em 1em 0.5em 3em;
+      border-bottom: 1px solid #fff;
+
+      &:last-child {
+        border-bottom: 0;
+      }
+
+      &.all {
+        background: #444;
+      }
+    }
+
+    a.selected {
+      padding-left: 1em;
+      background-color: #009eec;
+      &:before {
+        font-family: FontAwesome;
+        content: "\f00c";
+        display: inline-block;
+        vertical-align: middle;
+        padding-right: 1em;
+      }
+    }
+
+    a:hover, a.selected:hover {
+      background-color: #337AB7;
+    }
+  }
 }
