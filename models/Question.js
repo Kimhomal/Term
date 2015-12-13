@@ -3,8 +3,8 @@ var mongoose = require('mongoose'),
     Schema = mongoose.Schema;
 
 var schema = new Schema({
-  survey: {type: Schema.Types.ObjectId, required: true, trim: true},//해당 설문지
-  content: {type: String, required: true, trim: true},//질문내용
+  survey: {type: Schema.Types.ObjectId, required: true, trim: true}, //해당 설문지
+  content: {type: String, required: true, trim: true}, //질문내용
   numOptions: {type: Number, default: 0}//옵션 수
 }, {
   toJSON: {

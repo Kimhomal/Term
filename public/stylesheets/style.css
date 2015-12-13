@@ -32,6 +32,9 @@
 .form-survey textarea {
   border: none; }
 
+.input-group input {
+  border: none; }
+
 .side section {
   background: #888;
   width: 100%;
@@ -46,8 +49,6 @@
     border-bottom: 1px solid #fff; }
     .side section a:last-child {
       border-bottom: 0; }
-    .side section a.all {
-      background: #444; }
   .side section a.selected {
     padding-left: 1em;
     background-color: #009eec; }

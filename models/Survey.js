@@ -4,9 +4,9 @@ var mongoose = require('mongoose'),
 
 var schema = new Schema({
   user: {type: Schema.Types.ObjectId, index: true, required: true},
-  title: {type: String, required: true, trim: true},//설문지 제목
-  descript: {type: String, required: true, trim: true},//설문지 내용
-  numQuestion: {type: Number, default: 0},//설문지 질문 수
+  title: {type: String, required: true, trim: true}, //설문지 제목
+  descript: {type: String, required: true, trim: true}, //설문지 내용
+  numQuestion: {type: Number, default: 0}, //설문지 질문 수
   createdAt: {type: Date, default: Date.now}
 }, {
   toJSON: {

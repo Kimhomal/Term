@@ -1,4 +1,8 @@
-var express = require('express');
+var express = require('express'),
+    User = require('../models/User'),
+    Survey = require('../models/Survey'),
+    Question = require('../models/Question'),
+    Options = require('../models/Options');
 var router = express.Router();
 
 function needAuth(req, res, next){
@@ -14,4 +18,11 @@ router.get('/', needAuth, function(req, res, next) {
   res.render('surveys');
 });
 
+router.post('/', needAuth, function(req, res, next) {
+  if(!req.body.title) {
+    req.flash('danger', '설문지 제목을 입력하세요!');
+    res.redirect('back');
+  }
+  var survey = new Survey
+});
 module.exports = router;
