@@ -23,6 +23,7 @@ router.post('/', needAuth, function(req, res, next) {
     req.flash('danger', '설문지 제목을 입력하세요!');
     res.redirect('back');
   }
-  var survey = new Survey
+  var survey = new Survey();
+  res.redirect('surveys');
 });
 module.exports = router;

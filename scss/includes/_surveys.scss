@@ -5,6 +5,9 @@
   textarea {
     border: none;
   }
+  button {
+    float: right;
+  }
 }
 
 .input-group {
@@ -15,8 +18,9 @@
 
 .side {
   section {
+    position: fixed;
     background: #888;
-    width: 100%;
+    width: 150px;
     color: #fff;
     a {
       color: #fff;

@@ -2,19 +2,19 @@ script(type='text/javascript', src='/javascripts/surveys.js')
 form.form-survey(action='/surveys', method='POST')
   .panel.panel-default.survey-form
     .panel-heading
-      input(type='text', id='title', class='form-control input-lg', 
-      placeholder='설문지 제목을 입력하세요', value='안녕')
-      textarea(id='descript', class='form-control', rows='2',
+      input(type='text', id='title', name='title', class='form-control input-lg', 
+      placeholder='설문지 제목을 입력하세요')
+      textarea(id='descript', name='descript', class='form-control', rows='2',
       placeholder='설문지 설명을 입력하세요')
     .panel-body
-      input(type='text', id='question-title1', class='form-control', placeholder='질문을 입력하세요')
+      input(type='text', id='question-title1', name='question', class='form-control', placeholder='질문을 입력하세요')
       #optionline1.row
         button.add-option.btn.btn-default(type='button') 옵션추가
         .col-lg-12
           .input-group
             span.input-group-addon
               input(type='checkbox')
-            input(type='text', id='option1', class='form-control', placeholder='옵션1')
+            input(type='text', id='option1', name='option', class='form-control', placeholder='옵션1')
             span.remove.input-group-addon
               i.fa.fa-trash-o
   .form-action
