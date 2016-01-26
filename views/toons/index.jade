@@ -4,6 +4,17 @@ block content
   .container
     h1.page-header 원펀맨
     
-    img(src="/images/000.jpg" alt="onepunman")
-    img(src="/images/001.jpg" alt="onepunman")
-    img(src="/images/007.jpg" alt="onepunman")
+    table.table.table-striped.table-bordered
+      thead
+        tr
+          th 이름
+          th 화수
+          th 링크
+      tbody
+        each toon in toons
+          tr
+            td= toon.name
+            td= toon.chap
+            td
+              a.btn.btn-xs.btn-default(href='#{toon.link}') 보러가기
+    a.btn.btn.primary(href='/toons/new') 만화추가
