@@ -4,7 +4,7 @@ block content
   .container
     h1.page-header 원펀맨
     
-    table.table.table-striped.table-bordered
+    table.table.table-hover
       thead
         tr
           th 이름
@@ -17,4 +17,4 @@ block content
             td= toon.chap
             td
               a.btn.btn-xs.btn-default(href='#{toon.link}') 보러가기
-    a.btn.btn.primary(href='/toons/new') 만화추가
+    a.btn.btn-default(href='/toons/new') 만화추가

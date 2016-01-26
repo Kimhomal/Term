@@ -2,7 +2,7 @@ var express = require('express'),
     Toon = require('../models/Toon');
 var router = express.Router();
 
-router.get('/', function(rea, res, next){
+router.get('/', function(req, res, next){
   Toon.find({}, function(err, toons) {
     if(err){
       return next(err);
@@ -36,8 +36,8 @@ router.post('/', function(req, res, next){
         req.flash('success', '만화추가가 완료되었습니다');
         res.redirect('toons');
       }
-    })
-  })
+    });
+  });
 });
 
 module.exports = router;
