@@ -3,33 +3,34 @@ extends layout
 block hero-unit
   .jumbotron
     .container
-      h1 세젤예와 존잘레철
+      h1 김호철 포트폴리오
       p 테스트 아이디 : 1@4 비밀번호 : 123456
       p 관리자 아이디 : admin@admin  비밀번호 : 123456
-      p Github URL : https://github.com/Kimhomal/Term.git
+      p Github URL : 
+        a(href="https://github.com/Kimhomal/Term.git") https://github.com/Kimhomal/Term.git
 
 block content
   .container
     .row
       .col-sm-6.col-md-4
         .thumbnail
-          img(src="/images/onepunman-main.jpg" class="img-responsive" alt="thumbnail")
+          img(src="/images/resize-img.jpeg" class="img-responsive" alt="thumbnail")
           .caption
-            h3 원펀맨 보기!
-            p 세젤예님 원펀맨을 보고싶으시다면 바로가기를 눌러보아오!
+            h3 link page
+            p 링크를 이용해 다른 웹페이지로 이동
             p
               a.btn.btn-primary(href='toons') 바로가기
       .col-sm-6.col-md-4
         .thumbnail
-          img(src="/images/IMG_3321.JPG" class="img-responsive" alt="thumbnail")
+          img(src="/images/second-img.jpg" class="img-responsive" alt="thumbnail")
           .caption
-            h3 세젤예와 존잘레철 앨범
-            p 여기에는 세젤예와 존잘레철의 사진들을 올릴꺼에오! 기대해오!
+            h3 사진
+            p 사진 보기 페이지
             p
-              a.btn.btn-primary(href='photos') 여길 눌러오!
+              a.btn.btn-primary(href='photos') Go!
       .col-sm-6.col-md-4
         .thumbnail
-          img(src="/images/surveyImg2.jpg" class="img-responsive" alt="thumbnail")
+          img(src="/images/survey-img.jpg" class="img-responsive" alt="thumbnail")
           .caption
             h3 설문지 작성
             p 자신만의 설문지를 작성해보세요!!!!
