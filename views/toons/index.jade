@@ -2,13 +2,13 @@ extends ../layout
 
 block content
   .container
-    h1.page-header 원펀맨
+    h1.page-header link
     
     table.table.table-hover
       thead
         tr
           th 이름
-          th 화수
+          th 분류
           th 링크
       tbody
         each toon in toons
@@ -16,5 +16,7 @@ block content
             td= toon.name
             td= toon.chap
             td
-              a.btn.btn-xs.btn-default(href='#{toon.link}') 보러가기
-    a.btn.btn-default(href='/toons/new') 만화추가
+              a.btn.btn-xs.btn-default(href='#{toon.link}') 바로가기
+              | 
+              a.btn.btn-xs.btn-default(href='/toons/#{toon.name}?_method=DELETE') 삭제
+    a.btn.btn-default(href='/toons/new') 링크추가

@@ -21,7 +21,7 @@ router.post('/', function(req, res, next){
       return next(err);
     }
     if(toon){
-      req.flash('danger', '동일한 만화가 이미 존재합니다.');
+      req.flash('danger', '동일한 링크가 이미 존재합니다.');
       return res.redirect('back');
     }
     var newToon = new Toon({
@@ -33,10 +33,20 @@ router.post('/', function(req, res, next){
       if(err){
         next(err);
       }else{
-        req.flash('success', '만화추가가 완료되었습니다');
+        req.flash('success', '링크 추가 완료되었습니다');
         res.redirect('toons');
       }
     });
+  });
+});
+
+router.delete('/:name', function(req, res, next) {
+  Toon.findOneAndRemove({name: req.params.name}, function(err) {
+    if (err) {
+      return next(err);
+    }
+    req.flash('success', '링크가 삭제되었습니다.');
+    res.redirect('/toons');
   });
 });
 
